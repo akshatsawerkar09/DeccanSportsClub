@@ -1,0 +1,70 @@
+<div *ngIf="user.userName != '' else elseBlock" >
+    <mat-toolbar color="primary" *ngIf="user.userType == 'user'">
+        <span>
+            Deccan Sports Club
+        </span>
+    
+        <a mat-button routerLink="home" >Home</a>
+        <a mat-button routerLink="sports">Sports</a>
+        <a mat-button routerLink="aboutUs" >About Us</a>
+        <a mat-button routerLink="contactUs">Contact Us</a>
+        <a mat-button routerLink="dashboard">{{user.userName}}</a>
+        <div class="spacer"></div>
+    
+        <a mat-raised-button color="accent" routerLink="Logout">Logout</a>
+    </mat-toolbar>
+
+    <mat-toolbar color="primary" *ngIf="user.userType == 'manager'">
+        <span>
+            Deccan Sports Club
+        </span>
+    
+        <a mat-button routerLink="home" >Home</a>
+        <a mat-button routerLink="sports">Sports</a>
+        <a mat-button routerLink="manageBatches">Manage Batches</a>
+        <a mat-button routerLink="batchEnrollment">Batch Enrollment</a>
+        <a mat-button routerLink="aboutUs" >About Us</a>
+        <a mat-button routerLink="contactUs">Contact Us</a>
+        <a mat-button routerLink="dashboard">{{user.userName}}</a>
+        <div class="spacer"></div>
+    
+        <a mat-raised-button color="accent" routerLink="Logout">Logout</a>
+    </mat-toolbar>
+
+    <mat-toolbar color="primary" *ngIf="user.userType == 'admin'">
+        <span>
+            Deccan Sports Club
+        </span>
+    
+        <a mat-button routerLink="home" >Home</a>
+        <a mat-button routerLink="sports">Sports</a>
+        <a mat-button routerLink="manageSports">Manage Sports</a>
+        <a mat-button routerLink="Add Manager">Add Manager</a>
+        <a mat-button routerLink="aboutUs" >About Us</a>
+        <a mat-button routerLink="contactUs">Contact Us</a>
+        <a mat-button routerLink="dashboard">{{user.userName}}</a>
+        <div class="spacer"></div>
+    
+        <a mat-raised-button color="accent" routerLink="Logout">Logout</a>
+    </mat-toolbar>
+</div>
+
+
+<ng-template #elseBlock>
+    <mat-toolbar color="primary">
+        <span>
+            Deccan Sports Club
+        </span>
+    
+        <a mat-button routerLink="home" >Home</a>
+        <a mat-button routerLink="sports">Sports</a>
+        <a mat-button routerLink="aboutUs" >About Us</a>
+        <a mat-button routerLink="contactUs" >Contact Us</a>
+        <div class="spacer"></div>
+    
+        <a mat-raised-button color="accent" routerLink="Login" style="margin-right: 10px;">Login</a>
+        <a mat-raised-button color="accent" routerLink="Register">Sign Up</a>
+    </mat-toolbar>
+</ng-template>
+
+

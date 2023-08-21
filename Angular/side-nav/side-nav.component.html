@@ -1,0 +1,62 @@
+  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="!sidenav.opened">
+            menu
+        </mat-icon>
+        <mat-icon *ngIf="sidenav.opened">
+            close
+        </mat-icon>
+    </button>
+   <div class="row">
+       <div class="col-sm-2">
+            <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav">
+  
+        
+  
+        <mat-divider></mat-divider>
+  
+        <button mat-button class="menu-button">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+        <button mat-button class="menu-button" routerLink="Sportsship">
+          <mat-icon>stars</mat-icon>
+          <span>Sports</span>
+      </button>
+        <button mat-button class="menu-button">
+            <mat-icon>person</mat-icon>
+            <span>Manager Requests</span>
+        </button>
+        <button mat-button class="menu-button">
+          <mat-icon>assignment_ind</mat-icon>
+          <span>Accounts Details</span>
+      </button>
+        <button mat-button class="menu-button">
+            <mat-icon>assessment</mat-icon>
+            <span>Reports</span>
+        </button>
+  
+        <mat-divider></mat-divider>
+  
+        <button mat-button class="menu-button">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+  
+    </mat-sidenav>
+    </mat-sidenav-container>
+       </div>
+       <div class="col">
+           <router-outlet></router-outlet>
+       </div>
+   </div>
+   
+  
+ 
+   <!-- <mat-sidenav-content>
+        <div >
+            Main content here!
+        </div>
+    </mat-sidenav-content>-->
+  
+  
